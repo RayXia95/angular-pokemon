@@ -1,0 +1,112 @@
+<div>
+    <div class="panel-heading">
+        <span class="label label-default label-center">{{title}}</span>
+    </div>
+    <div class="panel-body">
+        <img class="image-center" src="{{image}}" />
+        <div class="list-group">
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                <strong>Coordinating</strong> parts of a <strong>Component</strong> into the <strong>Template</strong>.
+            </div>
+        </div>
+    </div>
+    <div class="panel-heading">
+        <span class="label label-default label-center">Interpolation {{interpolationNotation}}</span>
+    </div>
+    <div class="panel-body">
+        <div class="list-group">
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                For simple <strong>one-way</strong> data binding.
+            </div>
+            <div class="list-group-item list-group-item-demo">
+                <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
+                <div>
+                    <li>Our <strong>component</strong> value: <strong class="strong-green">{{interpolation}}</strong></li>
+                </div>
+                <div>
+                    <li>An <strong>evaluation</strong> (5+7): {{ 5 + 7 }}</li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-heading">
+        <span class="label label-default label-center">Event Binding ( )</span>
+    </div>
+    <div class="panel-body">
+        <div class="list-group">
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                For <strong>event</strong> handling.
+            </div>
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                Also <strong>one-way</strong> data binding (comming from the template).
+            </div>
+            <div class="list-group-item list-group-item-demo">
+                <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
+                <div>
+                    <li>Counter value: <strong class="strong-green">{{counter}}</strong></li>
+                </div>
+                <div>
+                    <button class="btn btn-primary btn-center" (click) = "incrementCounter()">Increment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-heading">
+        <span class="label label-default label-center">Property Binding []</span>
+    </div>
+    <div class="panel-body">
+        <div class="list-group">
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                Change an attribute of a node based on the changes of a property.
+            </div>
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                We can also bind to the properties of other components.
+            </div>
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                It is also a one-way databinding (coming from the component).
+            </div>
+            <div class="list-group-item list-group-item-demo">
+                <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
+                <div [ngStyle]="objectStyle" (click)="changeStyles()">
+                    Click me to toggle styles
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-heading">
+        <span class="label label-default label-center">Two-Way Binding [()]</span>
+    </div>
+    <div class="panel-body">
+        <div class="list-group">
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                To alter from user input or from the component.
+            </div>
+            <div class="list-group-item list-group-item-demo">
+                <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
+                <div>
+                    <input [(ngModel)]="user.email" placeholder="Email" class="form-control" />   
+                </div>
+                <div>
+                    <input [(ngModel)]="user.password" placeholder="Password" type="password" class="form-control" />   
+                </div>
+                <div>
+                    <li>Email: <strong class="strong-green">{{user.email}}</strong></li>
+                </div>
+                <div>
+                    <li>Password: <strong class="strong-green">{{user.password}}</strong></li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <a href="{{documentation}}">Documentation</a>
+    </div>
+</div>

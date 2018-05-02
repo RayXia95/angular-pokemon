@@ -1,0 +1,45 @@
+<div>
+  <div class="panel-heading">
+      <span class="label label-default label-center">{{title}}</span>
+  </div>
+  <div class="panel-body">
+      <div class="list-group">
+          <div class="list-group-item">
+              <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+              We can make <strong>asynchronous</strong> HTTP calls.
+          </div>
+          <div class="list-group-item">
+            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+            We have to create our Service class which uses the Http object.
+          </div>
+          <div class="list-group-item">
+            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+            We have to <strong>inject</strong> our Service into our component.
+          </div>
+          <div class="list-group-item">
+            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+            We are consuming a Pokemon API <strong>endpoint</strong>.
+          </div>
+          <div class="list-group-item">
+            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+            We are using the <strong>Publisher/Subscriber</strong> design pattern.
+          </div>
+          <div class="list-group-item list-group-item-demo">
+              <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
+              <div *ngIf="pokemon.name">
+                <strong>Name: </strong> {{ pokemon.name | uppercase }}
+                <img class="image-center" src="{{pokemon.sprites.front_default}}" />
+              </div>
+              <div>
+                <input [(ngModel)]='pokemon.id' (blur)="getPokemonInformation()" placeholder="Pokemon ID" class="form-control"/>
+              </div>
+              <div>
+                
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="panel-footer">
+      <a href="{{documentation}}">Documentation</a>
+  </div>
+</div>
